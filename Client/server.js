@@ -21,7 +21,7 @@ const {
 const {
     fac_types,
     accommodate
-} = require("./handlers/Fac_types");
+} = require("./handlers/Fac_Types");
  const {
     facility,
     getOwnID,
