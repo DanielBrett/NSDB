@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <link rel="stylesheet" href="interface.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+          deb = require("../Client/util/debugConfig");
+          DEBUG = deb.DEBUG;
+
+          if(DEBUG == false){
+            console.log = function () {};
+          }
+        </script>
+        <script src="fac_Type_Parser.js"></script>
+        <script src="facility_Parser.js"></script>
+        <script src="events_Parser.js"></script>
+        <script src="contains_Parser.js"></script>
+        <script src="participants_Parser.js"></script>
+        <script src="host_Hotels_Parser.js"></script>
+    </head>
+    <body>
+        <div class="col-sm-6 mx-auto">
+            <div class="card  text-center border-primary mb-3">
+              <div class="card-body">
+                <h5 class="card-title">NSD</h5>
+                <p class="card-text">Select local CSV File:</p>
+                <input id="csv" type="file">
+
+                <div class="btn-group-vertical  role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-primary"onclick="fac_typeCSV()">Fac_Type</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="facilityCSV()">Facility</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="eventsCSV()">Events</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="containsCSV()">Division</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="participantsCSV()">Participants</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="hosthotelsCSV()">Host_Hotels</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="" async defer></script>
+    </body>
+</html>
