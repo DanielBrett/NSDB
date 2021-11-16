@@ -1,22 +1,33 @@
-Install Node.Js and Npm from: https://nodejs.org/en/download/
-    * Follow the steps and ensure the installations are on your PATH 
-    * ensure installations by opening a Shell and running both
-        node -v
-        npm -v
-    *These should return the versions installed on the system
+Running this program on reclaim cloud:
 
-How to run the Server Locally
-    *First Navigate to Client inside of NSDB by using the Shell cd commands
-    *now run 
-        npm install
-    *This will install all necessary packages from package.json automatically
-    *now run 
-        node server.js
-    *Make sure the whole time you are inside the NSDB_Interface_Test directory
-    *The server should now be running on local host 8080
-    *Go to chrome browser and attempt all these links
-        http://localhost:8080
+After logging into reclaim cloud, we have two nodes having ID 8963 and 8976.
 
+
+Node 8963:
+This is the backend of our program.
+Click on web ssh for this node and then "cd ROOT/Client"
+now do ```node server.js```
+
+
+Node 8976:
+This is the front end of out program
+Click on web ssh for this node and then "cd ROOT/Parsers"
+now do ```node app.js```
+
+
+Moreover, we can use the forever module of npm to let the program running even after we close the tab.
+To make this possible, first install the package by doing
+```
+[sudo] npm install forever -g
+```
+Now instaead of doing "node server.js" and "node app.js", you need to do
+```forever start server.js``` and ```forever app.js``` (be careful that you need to be in the correct folder to run each command)
+
+
+
+
+
+----- support for an older version of this software, there still might be usefull stuf inside it -----------
 
 Within the Utility Folder there is a config file into which you will insert the Database host location and authentication details
 
