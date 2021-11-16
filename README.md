@@ -21,7 +21,7 @@ To make this possible, first install the package by doing
 [sudo] npm install forever -g
 ```
 Now instaead of doing "node server.js" and "node app.js", you need to do
-```forever start server.js``` and ```forever app.js``` (be careful that you need to be in the correct folder to run each command)
+```forever start server.js``` and ```forever start app.js``` (be careful that you need to be in the correct folder to run each command)
 
 
 
