@@ -100,7 +100,7 @@ app.get('/myapp/', function(req, res){
 });
 
 //once server is initialized it is set to port 8080 and we will get a console log if successful
-app.listen(8080); 
+app.listen(4848); 
 console.log("NSDB Server Online")
 
 
