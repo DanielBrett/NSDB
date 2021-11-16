@@ -15,7 +15,7 @@ How to run the Server Locally
     *Make sure the whole time you are inside the NSDB_Interface_Test directory
     *The server should now be running on local host 8080
     *Go to chrome browser and attempt all these links
-        http://localhost:8080/
+        http://localhost:8080
 
 
 Within the Utility Folder there is a config file into which you will insert the Database host location and authentication details
@@ -208,3 +208,4 @@ fetch(url+'get/ownID',opt).then(res => res.json()).then(data => {do stuff here}
 - Progression bar and feedback to user via Interface while data is being inserted 
    > please see https://getbootstrap.com/docs/5.0/components/progress/
 - Prettify Interface if wanted
+# NSDB
