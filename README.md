@@ -27,7 +27,7 @@ Now instaead of doing "node server.js" and "node app.js", you need to do
 
 
 
------ support for an older version of this software, there still might be usefull stuf inside it -----------
+----- support for an older version of this program, there still might be usefull stuff inside it -----------
 
 Within the Utility Folder there is a config file into which you will insert the Database host location and authentication details
 
