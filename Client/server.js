@@ -95,7 +95,12 @@ app.post("/insert/hostHotels",hostHotels);
 app.post("/insert/reserves",reserves);
 app.post("/get/hotelID",getHotelID );
 
+app.get('/myapp/', function(req, res){
+    res.send("Hello from the root application URL");
+});
 
 //once server is initialized it is set to port 8080 and we will get a console log if successful
-app.listen(8080);
+app.listen(8080); 
 console.log("NSDB Server Online")
+
+

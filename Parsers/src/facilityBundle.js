@@ -1,3 +1,28 @@
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.facilityBundle = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+module.exports = {
+    host:"https://node8963-env-0185007.us.reclaim.cloud/",
+    getHostURL: function(){
+        return this.host
+    }
+}
+},{}],2:[function(require,module,exports){
+module.exports = {
+    sanitize: function(option,string){
+        switch(option){
+            case "escape":
+                return string.replace(/[\"']/g, '\$&').replace(/\u0000/g, '\\0') ;
+            case "removespace":
+                return string.replace(/\s+/g, '');
+            case "escape&eol":
+                return string.replace("\r","").replace(/[\"']/g, '\$&').replace(/\u0000/g, '\\0') ;
+            case "dashes":
+                return string.replace(/-/g, "");
+            case "eol":
+                return string.replace("\r","");
+        }
+    }
+}
+},{}],3:[function(require,module,exports){
 const host = require("../Client/util/hostConfig.js");
 const url = host.getHostURL();
 const sanitizer = require("../Client/util/sanitizer.js");
@@ -139,4 +164,8 @@ async function getFacID(facType)
 }
 
 module.exports = {facilityFunc: facilityCSV};
+
+
+},{"../Client/util/hostConfig.js":1,"../Client/util/sanitizer.js":2}]},{},[3])(3)
+});
 

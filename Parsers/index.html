@@ -13,20 +13,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
-        <script>
-          deb = require("../Client/util/debugConfig");
-          DEBUG = deb.DEBUG;
 
-          if(DEBUG == false){
-            console.log = function () {};
-          }
-        </script>
-        <script src="fac_Type_Parser.js"></script>
-        <script src="facility_Parser.js"></script>
-        <script src="events_Parser.js"></script>
-        <script src="contains_Parser.js"></script>
-        <script src="participants_Parser.js"></script>
-        <script src="host_Hotels_Parser.js"></script>
+        <script src="src/facTypeBundle.js"></script>
+        <script src="src/facilityBundle.js"></script>
+        <script src="src/eventsBundle.js"></script>
+        <script src="src/containsBundle.js"></script>
+        <script src="src/participantsBundle.js"></script>
+        <script src="src/hostHotelsBundle.js"></script>
     </head>
     <body>
         <div class="col-sm-6 mx-auto">
@@ -37,12 +30,12 @@
                 <input id="csv" type="file">
 
                 <div class="btn-group-vertical  role="group" aria-label="Basic outlined example">
-                    <button type="button" class="btn btn-outline-primary"onclick="fac_typeCSV()">Fac_Type</button>
-                    <button type="button" class="btn btn-outline-primary"onclick="facilityCSV()">Facility</button>
-                    <button type="button" class="btn btn-outline-primary"onclick="eventsCSV()">Events</button>
-                    <button type="button" class="btn btn-outline-primary"onclick="containsCSV()">Division</button>
-                    <button type="button" class="btn btn-outline-primary"onclick="participantsCSV()">Participants</button>
-                    <button type="button" class="btn btn-outline-primary"onclick="hosthotelsCSV()">Host_Hotels</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="facTypeBundle.myFunc()">Fac_Type</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="facilityBundle.facilityFunc()">Facility</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="eventsBundle.eventsFunc()">Events</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="containsBundle.containsFunc()">Division</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="participantsBundle.participantsFunc()">Participants</button>
+                    <button type="button" class="btn btn-outline-primary"onclick="hostHotelsBundle.hotelFunc()">Host_Hotels</button>
                   </div>
               </div>
             </div>
