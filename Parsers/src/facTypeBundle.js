@@ -68,6 +68,7 @@ async function fac_type(data){
             "height": sanitizer.sanitize("eol",curr_row[5])
         }
         const options = {
+          
             method: 'POST',
             body: JSON.stringify(fin_data),
             headers: {'Content-Type': 'application/json'}
@@ -84,12 +85,14 @@ async function insertActivity(activityName){
         "activityName": activityName
     }
     const opt={
+      //mode: 'no-cors',
         method:'POST',
         body:JSON.stringify(data),
         headers: {'Content-Type': 'application/json'}
     }
 
     let response = await fetch(url+'get/activity',opt);
+  //console.log("this is the response"+response.json());
     let data4 = await response.json();
 
     console.log("fetch returned");
@@ -99,6 +102,7 @@ async function insertActivity(activityName){
             "activityName":activityName
         };
         const opt1 ={
+          
             method:'POST',
             body:JSON.stringify(data1),
             headers: {'Content-Type': 'application/json'}
@@ -116,6 +120,14 @@ module.exports = {myFunc: fac_typeCSV};
 
 },{"../Client/util/hostConfig.js":1,"../Client/util/sanitizer.js":2}]},{},[3])(3)
 });
+
+
+
+
+
+
+
+
 
 
 
