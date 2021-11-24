@@ -6,7 +6,11 @@ const express = require("express");
 app.use(express.json({
     type: ['application/json', 'text/plain']
   }));
-app.use(cors());
+app.use(cors({
+	origin:"https://env-0185007.us.reclaim.cloud",
+
+}));
+
 
 
 
@@ -59,6 +63,7 @@ const {
 app.post("/insert/owner",Own);
 
 // //activities routes
+
 app.post("/insert/activities",Act);
 app.post("/get/activity",getAct);
 
@@ -99,8 +104,15 @@ app.get('/myapp/', function(req, res){
     res.send("Hello from the root application URL");
 });
 
-//once server is initialized it is set to port 8080 and we will get a console log if successful
+//once server is initialized it is set to port 4848 and we will get a console log if successful
 app.listen(4848); 
 console.log("NSDB Server Online")
+
+
+
+
+
+
+
 
 
