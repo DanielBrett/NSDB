@@ -31,8 +31,8 @@ const {
     getOwnID,
     getFacTypeID,
     getFacID,
-//     fHasFt,
-//     oOwnsF
+     fHasFt,
+     oOwnsF
 } = require("./handlers/Facility");
 const {
     events,
@@ -69,6 +69,8 @@ app.post("/get/activity",getAct);
 
 //facility type routes
 app.post("/insert/fac_Type",fac_types);
+app.post("/insert/fHasFt",fHasFt);
+app.post("/insert/oOwnsF",oOwnsF);
 app.post("/get/ownID",getOwnID);
 app.post("/get/facTypeID",getFacTypeID);
 
@@ -107,6 +109,9 @@ app.get('/myapp/', function(req, res){
 //once server is initialized it is set to port 4848 and we will get a console log if successful
 app.listen(4848); 
 console.log("NSDB Server Online")
+
+
+
 
 
 
